@@ -1,0 +1,14 @@
+{
+  "name": "rusik-site",
+  "version": "1.0.0",
+  "description": "landing page",
+  "source": "index.html",
+  "scripts": {
+    "sass:watch": "sass --watch styles:dist"
+  },
+  "author": "Lev",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.83.4"
+  }
+}

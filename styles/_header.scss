@@ -1,0 +1,98 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0 10px;
+  background-color: v.$color_black-light;
+
+  &__wrapper {
+    width: 100%;
+    padding: 10px 0;
+    @include m.d-flex(space-between, center);
+
+    @media (max-width: v.$media_md) {
+      @include m.d-flex(center, center, nowrap, column, 0, 25px);
+    }
+  }
+
+  &__logo-link {
+    text-transform: uppercase;
+    @include m.d-flex(center, center, nowrap, column, 5px);
+    @include m.font(25px, 700, v.$color_crema);
+
+    user-select: none;
+
+    @media (max-width: v.$media_md) {
+      flex-direction: row;
+    }
+
+    @media (max-width: v.$media_min) {
+      font-size: 21px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: v.$color_crema-dark;
+    }
+  }
+
+  &__nav {
+    ul {
+      @include m.d-flex(center, center, nowrap, row, 20px);
+      @include m.font(20px, 400, v.$color_crema);
+    }
+
+    &-link {
+      text-transform: uppercase;
+
+      &:hover {
+        cursor: pointer;
+        color: v.$color_crema-dark;
+      }
+    }
+
+    @media (max-width: v.$media_md) {
+      display: none;
+    }
+  }
+
+  &__contacts {
+    @include m.d-flex(center, center, nowrap, row, 15px);
+
+    @media (max-width: v.$media_md) {
+      column-gap: 40px;
+    }
+
+    &-whatsapp, &-avito {
+      width: 40px;
+      height: 40px;
+
+      @media (max-width: v.$media_md) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &-phone {
+      text-transform: uppercase;
+      @include m.font(20px, 400, v.$color_crema);
+
+      @media (max-width: v.$media_md) {
+        font-size: 23px;
+      }
+
+      @media (max-width: v.$media_min) {
+        font-size: 21px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: v.$color_crema-dark;
+      }
+    }
+  }
+}
+

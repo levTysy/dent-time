@@ -1,0 +1,37 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.works {
+  padding: 25px 10px 35px;
+
+  &__title {
+    margin: 0 auto 30px;
+    text-align: center;
+    text-transform: uppercase;
+    @include m.font(35px, 400, v.$color_crema);
+  }
+
+  &__wrapper {
+  
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+
+    &-item {
+      
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.show {
+  position: absolute;
+  width: 98%;
+  left: 50%;
+  transform: translate(-50%);
+}

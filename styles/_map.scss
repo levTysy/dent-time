@@ -1,0 +1,55 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.map {
+  padding: 25px 10px 35px;
+  @include m.d-flex(center, start, nowrap, row, 20px);
+
+  @media (max-width: v.$media_md) {
+    @include m.d-flex(center, center, nowrap, column, 0, 20px);
+  }
+
+  &__desc {
+    width: 45%;
+    @include m.d-flex(center, center, nowrap, column, 0, 25px);
+
+    @media (max-width: v.$media_md) {
+      width: 100%;
+    }
+
+    &-title {
+      text-align: center;
+      text-transform: uppercase;
+      @include m.font(25px, 700, v.$color_crema);
+    }
+
+    &-about {
+      text-align: justify;
+      @include m.font(18px, 400, v.$color_crema);
+    }
+
+    &-img {
+      width: 90%;
+
+      @media (max-width: v.$media_md) {
+        display: none;
+      }
+    }
+  }
+
+  &__block {
+    width: 500px;
+    height: 500px;
+
+    @media (max-width: v.$media_sm) {
+      width: 400px;
+      height: 400px;
+    }
+
+    @media (max-width: v.$media_min) {
+      width: 320px;
+      height: 320px;
+    }
+  }
+}
+

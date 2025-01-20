@@ -11,7 +11,7 @@ for (let work of works) {
 
 // АПИ Яндекс Карт
 
-let center = [45.05307662951782,42.03256427177989];
+let center = [45.05328446435812,42.032487139561994];
 
 function init() {
   let map = new ymaps.Map('map__block', {

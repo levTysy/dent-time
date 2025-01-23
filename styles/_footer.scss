@@ -1,3 +1,13 @@
 @use 'variables' as v;
-@use 'mixins' as m;
 
+.footer {
+  background-color: v.$color_black-light;
+
+  &__wrapper {
+    padding: 10px 0;
+
+    &-text {
+      text-align: center;
+    }
+  }
+}

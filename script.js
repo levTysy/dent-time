@@ -6,8 +6,20 @@ let body = document.querySelector('body');
 for (let work of works) {
   work.addEventListener('click', function() {
     work.classList.toggle('show');
-  });
+    body.classList.toggle('overflow-hidden');
+  });  
 }
+
+// Цвет ссылок после ховера
+
+// let links = document.querySelectorAll('a');
+
+// for (let link of links) {
+//   link.addEventListener('click', function() {
+//     link.style.color = '#e2dbb4';
+//   });
+// }
+
 
 // АПИ Яндекс Карт
 

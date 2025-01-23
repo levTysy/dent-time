@@ -12,22 +12,24 @@
     />
     <link rel="icon" href="assests/logo/clean-car.png" type="image/png" />
     <link rel="stylesheet" href="dist/index.css" />
-    <title>Dental_site</title>
+    <title>Удаление вмятин</title>
   </head>
   <body>
-    <header class="header">
+    <header id="header" class="header">
       <div class="container">
         <div class="header__wrapper">
           <div class="header__logo">
-            <a class="header__logo-link" href="#"
-              >Удаление вмятин без покраски</a
-            >
+            <a class="header__logo-link" href="#">
+              <img src="assests/logo/Logo.png" alt="Логотип" />
+            </a>
           </div>
 
           <nav class="header__nav">
             <ul>
-              <li><a class="header__nav-link" href="#">Главная</a></li>
-              <li><a class="header__nav-link" href="#">Примеры работ</a></li>
+              <li><a class="header__nav-link" href="#car">Главная</a></li>
+              <li>
+                <a class="header__nav-link" href="#works">Примеры работ</a>
+              </li>
             </ul>
           </nav>
 
@@ -67,7 +69,7 @@
     </header>
 
     <main class="main">
-      <section class="car">
+      <section id="car" class="car">
         <div class="car__block">
           <img
             src="assests/img/sixty-special-33-1.jpg"
@@ -76,8 +78,37 @@
         </div>
       </section>
 
+      <section class="map-section">
+        <div class="container">
+          <div class="map__wrapper map">
+            <div class="map__desc">
+              <h2 class="map__desc-title">
+                Удаление вмятин без покраски в Ставрополе
+              </h2>
+              <p class="map__desc-about">
+                Предоставляю услуги ремонта вмятин без покраски (PDR) устранения
+                последствий града, ремонт вмятин на бамперах. Индивидуальный
+                подход к каждому человеку) делаю скидки
+              </p>
+              <p class="map__desc-about">
+                Адрес: Ставрополь, Старомарьевское шоссе, 30Б
+              </p>
+
+              <img
+                class="map__desc-img"
+                src="assests/img/sticker23.webp"
+                alt=""
+              />
+            </div>
+
+            <div id="map__block" class="map__block"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="about">
         <div class="container">
+          <h2 class="about__title">О технологии удаления вмятин</h2>
           <div class="about__wrapper">
             <p class="about__wrapper-desc">
               Технология, с помощью которой вмятины на кузове автомобиля
@@ -121,7 +152,7 @@
         </div>
       </section>
 
-      <section class="works">
+      <section id="works" class="works">
         <div class="container">
           <h2 class="works__title">Мои работы</h2>
           <div class="works__wrapper">
@@ -163,39 +194,16 @@
           </div>
         </div>
       </section>
-
-      <section class="map-section">
-        <div class="container">
-          <div class="map__wrapper map">
-            <div class="map__desc">
-              <h2 class="map__desc-title">
-                Удаление вмятин без покраски в Ставрополе
-              </h2>
-              <p class="map__desc-about">
-                Предоставляю услуги ремонта вмятин без покраски (PDR) устранения
-                последствий града, ремонт вмятин на бамперах. Индивидуальный
-                подход к каждому человеку) делаю скидки
-              </p>
-              <p class="map__desc-about">
-                Адрес: Ставрополь, Старомарьевское шоссе, 30Б
-              </p>
-
-              <img
-                class="map__desc-img"
-                src="assests/img/sticker23.webp"
-                alt=""
-              />
-            </div>
-
-            <div id="map__block" class="map__block"></div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">
       <div class="container">
-        <div class="footer__wrapper"></div>
+        <div class="footer__wrapper">
+          <p class="footer__wrapper-text">
+            Copyright © 2024 DENT TIME. All Rights Reserved. <br />
+            Made by Lev Tysyachniy
+          </p>
+        </div>
       </div>
     </footer>
 

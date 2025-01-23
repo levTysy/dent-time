@@ -7,6 +7,7 @@
   width: 100%;
   padding: 0 10px;
   background-color: v.$color_black-light;
+  z-index: 10;
 
   &__wrapper {
     width: 100%;
@@ -19,23 +20,19 @@
   }
 
   &__logo-link {
-    text-transform: uppercase;
-    @include m.d-flex(center, center, nowrap, column, 5px);
-    @include m.font(25px, 700, v.$color_crema);
-
-    user-select: none;
-
-    @media (max-width: v.$media_md) {
-      flex-direction: row;
-    }
-
-    @media (max-width: v.$media_min) {
-      font-size: 21px;
-    }
 
     &:hover {
       cursor: pointer;
-      color: v.$color_crema-dark;
+    }
+
+    img {
+      width: 125px;
+      height: 80px;
+
+      @media (max-width: v.$media_md) {
+        width: 150px;
+        height: 110px;
+      }
     }
   }
 
@@ -48,21 +45,32 @@
     &-link {
       text-transform: uppercase;
 
-      @media (hover: hover) {
+      @media (hover:hover) {
         &:hover {
-          color: v.$color_crema;
+          color: v.$color_crema-dark;
         }
       }
-    
-      @media (hover: none) {
+
+      @media (hover:none) {
         &:active {
           color: v.$color_crema-dark;
         }
       }
+
+
+      // &:hover {
+      //   color: v.$color_crema-dark;
+      // }
+
+      // &:active {
+      //   color: v.$color_grey;
+      // }
     }
 
-    @media (max-width: v.$media_md) {
-      display: none;
+    @media (max-width: v.$media_lg) {
+      &:hover {
+        color: v.$color_crema;
+      }
     }
   }
 
@@ -78,17 +86,14 @@
       width: 40px;
       height: 40px;
       border-radius: 2px;
+      animation: scale alternate 1s infinite linear;
 
-      @media (hover: hover) {
-        &:hover {
-          background-color: none;
-        }
+      &:hover {
+        background-color: none;
       }
     
-      @media (hover: none) {
-        &:active {
-          background-color: v.$color_crema;
-        }
+      &:active {
+        background-color: v.$color_crema;
       }
 
       @media (max-width: v.$media_md) {
@@ -99,28 +104,52 @@
 
     &-phone {
       text-transform: uppercase;
+      animation: color alternate 3s infinite linear;
       @include m.font(20px, 400, v.$color_crema);
 
       @media (max-width: v.$media_md) {
-        font-size: 23px;
+        font-size: 20px;
       }
 
       @media (max-width: v.$media_min) {
-        font-size: 21px;
+        font-size: 20px;
       }
 
-      @media (hover: hover) {
-        &:hover {
-          color: v.$color_crema;
-        }
+      &:hover {
+        color: v.$color_crema-dark;
       }
-    
-      @media (hover: none) {
-        &:active {
-          color: v.$color_crema-dark;
-        }
+
+      &:active {
+        color: v.$color_crema;
       }
     }
   }
 }
 
+@keyframes scale {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.15;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes color {
+  0% {
+    color: v.$color_crema;
+  }
+
+  50% {
+    color: v.$color_black-light;
+  }
+
+  100% {
+    color: v.$color_crema;
+  }
+}

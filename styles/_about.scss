@@ -2,7 +2,20 @@
 @use 'mixins' as m;
 
 .about {
+  padding: 25px 0;
   width: 100%;
+
+  &__title {
+    margin: 0 auto 30px;
+    text-align: center;
+    text-transform: uppercase;
+    @include m.font(35px, 400, v.$color_crema);
+
+    @media (max-width: v.$media_sm) {
+      margin-bottom: 0;
+      font-size: 25px;
+    }
+  }
 
   &__wrapper {
     padding: 25px 10px 35px;
